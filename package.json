@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "rollup-vue-template",
   "version": "1.0.0",
   "description": "",
   "main": "rollup.config.js",
@@ -10,6 +10,7 @@
     "@vue/compiler-sfc": "^3.0.11",
     "rollup": "^2.48.0",
     "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-vue": "^6.0.0"
