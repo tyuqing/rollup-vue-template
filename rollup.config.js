@@ -1,6 +1,6 @@
 import vuePlugin from 'rollup-plugin-vue'
 import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs'
+import commonjs from '@rollup/plugin-commonjs'
 import replacePlugin from 'rollup-plugin-replace'
 import copyPlugin from 'rollup-plugin-copy'
 
@@ -14,6 +14,11 @@ export default {
     copyPlugin({
       targets:[{ src: 'public/*', dest: 'dist' }]
     }),
+    commonjs({
+      include: 'node_modules/**',
+      extensions: [ '.js', '.vue' ],
+      
+    }),
     resolve(),
     vuePlugin({
       css: true,
@@ -23,7 +28,6 @@ export default {
     replacePlugin({
       'process.env.NODE_ENV': JSON.stringify( 'production' )
     }),
-    commonjs(),
   ],
   external: [ 'Vue' ]
 }
