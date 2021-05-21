@@ -29,5 +29,5 @@ export default {
       'process.env.NODE_ENV': JSON.stringify( 'production' )
     }),
   ],
-  external: [ 'Vue' ]
+  external: [ 'Vue','element-ui' ]
 }

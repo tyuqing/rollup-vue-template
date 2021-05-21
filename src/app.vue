@@ -1,5 +1,11 @@
 <template>
-  <div>hello world</div>
+  <div>
+    <p>hello world</p>
+    <el-button @click="visible = true">Button</el-button>
+    <el-dialog :visible.sync="visible" title="Hello world">
+      <p>Try Element</p>
+    </el-dialog>
+  </div>
 </template>
 
 <script>
@@ -7,7 +13,9 @@ export default {
   components: { },
   props: {},
   data: function() {
-    return {};
+    return {
+      visible: false
+    };
   },
   computed: {},
   watch: {},

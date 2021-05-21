@@ -1,4 +1,5 @@
 import App from './app.vue'
 
-Vue.createApp(App)
-  .mount('#app')
+new Vue({
+  render: h => h(App),
+}).$mount('#app');
